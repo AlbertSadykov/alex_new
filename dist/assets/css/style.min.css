@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Serif"), url("../fonts/NotoSerif-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans"), url("../fonts/NotoSans.woff") format("woff");
+}
+@font-face {
+  font-family: "NotoSans-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans"), url("../fonts/NotoSans-Bold.woff") format("woff");
+}
+.container {
+  max-width: 1560px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 0;
+  border-radius: 8px;
+  background: #EF3E36;
+  border: 0;
+  transition: 0.2s linear;
+}
+.button a {
+  font-family: "Noto Sans", sans-serif;
+  display: block;
+  color: #fff;
+  padding: 16px 40px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #1E1928;
+}
+
+.button__white {
+  padding: 0;
+  border-radius: 8px;
+  background: #fff;
+  border: 0;
+  transition: 0.2s linear;
+}
+.button__white a {
+  font-family: "Noto Sans", sans-serif;
+  display: block;
+  text-align: center;
+  color: #1E1928;
+  padding: 16px 56px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.button__white:hover {
+  background-color: #eeeeee;
+}
+
+.site__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0;
+  align-items: center;
+}
+
+.logo {
+  width: 157px;
+  max-width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+.nav ul li {
+  margin-right: 34px;
+}
+.nav ul li:last-child {
+  margin-right: 0;
+}
+.nav ul li a {
+  color: #1E1928;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.call__tel {
+  color: #1E1928;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.banner {
+  background: url(/assets/images/parallax/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layer__header {
+  margin-top: 96px;
+  display: flex;
+  justify-content: center;
+}
+.layer__header h1 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.layer__header button {
+  display: flex;
+  margin: 0 auto;
+}
+
+.layer__img {
+  position: relative;
+  z-index: 1;
+}
+
+.machine {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 1480px;
+  max-width: 100%;
+}
+
+.thread {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1E1928;
+}
+
+a {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 64px;
+}

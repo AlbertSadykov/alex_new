@@ -1,0 +1,42 @@
+.banner{
+  background: url(/assets/images/parallax/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layer__header{
+  margin-top: 96px;
+  display: flex;
+  justify-content: center;
+
+  h1{
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  button{
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.layer__img{
+  position: relative;
+  z-index: 1;
+}
+
+.machine{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 1480px;
+  max-width: 100%;
+
+}
+
+.thread{
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
