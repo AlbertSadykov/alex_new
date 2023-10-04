@@ -115,12 +115,14 @@
   background: url(/assets/images/parallax/Bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .layer__header {
   margin-top: 96px;
   display: flex;
   justify-content: center;
+  z-index: 4;
 }
 .layer__header h1 {
   text-align: center;
@@ -133,19 +135,25 @@
 
 .layer__img {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  height: 100vh;
 }
 
 .machine {
   display: block;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0 auto;
   width: 1480px;
   max-width: 100%;
 }
 
 .thread {
-  z-index: 2;
+  width: 541px;
+  max-width: 100%;
+  z-index: 3;
   position: absolute;
   left: 0;
   bottom: 0;
