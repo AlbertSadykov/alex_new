@@ -45,7 +45,7 @@ eval("\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
   \***********************************/
 /***/ (function() {
 
-eval("var image = document.getElementsByClassName('machine');\r\nnew simpleParallax(image, {\r\n\tdelay: .6,\r\n\ttransition: 'cubic-bezier(0,0,0,3)'\r\n});\r\n\r\nvar image = document.getElementsByClassName('thread');\r\nnew simpleParallax(image, {\r\n\tdelay: .6,\r\n\ttransition: 'cubic-bezier(0,0,0,1)'\r\n});\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/parallax.js?");
+eval("var image = document.getElementsByClassName('machine');\r\nnew simpleParallax(image, {\r\n\tdelay: .6,\r\n\ttransition: 'cubic-bezier(0,0,0,3)'\r\n});\r\n\r\nvar image = document.getElementsByClassName('thread');\r\nnew simpleParallax(image, {\r\n  delay: .2,\r\n\ttransition: 'cubic-bezier(0,0,0,5)'\r\n});\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n  window.addEventListener('scroll', function() {\r\n    var layersCaption = document.querySelector('.layers__caption');\r\n    var layersCaptionOffsetTop = layersCaption.offsetTop;\r\n    var scrollPosition = window.scrollY;\r\n\r\n    if (scrollPosition > layersCaptionOffsetTop) {\r\n      layersCaption.classList.add('hidden');\r\n    } else {\r\n      layersCaption.classList.remove('hidden');\r\n    }\r\n  });\r\n});\r\n\r\n\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/parallax.js?");
 
 /***/ })
 
