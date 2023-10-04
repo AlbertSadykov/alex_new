@@ -174,10 +174,16 @@
   bottom: 0;
 }
 
+.parallax__section {
+  position: relative;
+}
+
 .section_cta {
   padding: 56px 0 113px;
   border-radius: 40px 40px 0 0;
-  z-index: 20;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
   width: 100%;
   background: #fff;
 }
