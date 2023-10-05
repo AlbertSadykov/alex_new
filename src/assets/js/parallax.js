@@ -9,7 +9,9 @@ function handleScroll() {
     header.classList.add('hidden');
   } else {
     // Скролл вверх
-    header.classList.remove('hidden');
+    if (currentScrollPosition === 0) {
+      header.classList.remove('hidden');
+    }
   }
 
   lastScrollPosition = currentScrollPosition;
@@ -17,16 +19,7 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 
-document.addEventListener('DOMContentLoaded', function() {
-  var machine = document.querySelector('.machine');
-  
-  window.addEventListener('scroll', function() {
-    var scrollY = window.scrollY;
-    var translateY = Math.min(scrollY, 200);
-    var backgroundPositionY = Math.max(280 - translateY, 0); // Убедимся, что значение не становится отрицательным
-    machine.style.backgroundPositionY = backgroundPositionY + 'px';
-  });
-});
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -38,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var translateY = Math.min(scrollY, 100);
     machine.style.backgroundPosition = '0 ' + (280 - translateY) + 'px';
 
-    if (scrollY >= 100) {
+    if (scrollY >= 50) {
       gradient.style.opacity = '1';
     } else {
       gradient.style.opacity = '0';
@@ -61,17 +54,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // скролл cta
 document.addEventListener('DOMContentLoaded', function() {
-  var sectionCta = document.querySelector('.section_cta');
+  var ctaSection = document.querySelector('.section_cta');
 
-  window.addEventListener('scroll', function() {
-    var scrollY = window.scrollY;
-    var sectionCtaOffset = sectionCta.offsetTop;
-    var windowHeight = window.innerHeight;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        ctaSection.style.marginTop = '-250px';
+      } else {
+        ctaSection.style.marginTop = '0';
+      }
+    });
+  }, { threshold: [0] });
 
-    if (scrollY > sectionCtaOffset - windowHeight + 100) {
-      sectionCta.style.opacity = '1';
-      sectionCta.style.transform = 'translateY(0)';
-    }
-  });
+  observer.observe(ctaSection);
 });
-

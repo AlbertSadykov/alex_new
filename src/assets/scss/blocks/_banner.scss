@@ -32,13 +32,13 @@
 }
 
 .layers{
-  z-index: 999;
+  z-index: 20;
 }
 
 .layer__header {
   position: relative;
-  z-index: 999;
-  transition:  1s ease;
+  z-index: 20;
+  transition:  1.5s ease;
 }
 
 .layer__header.hidden {
@@ -53,7 +53,7 @@
 }
 
 .machine{
-  background-image: url(/assets/images/parallax/Sewing-machine\ \(1\).png);
+  background-image: url(/assets/images/parallax/Sewing-machine.png);
   background-size:100% auto;
 
   background-repeat: no-repeat;
@@ -90,13 +90,13 @@
 
 .thread{
   position: absolute;
-  width: 541px;
+  width: 500px;
   max-width: 100%;
   z-index: 10;
   right: 60%;
-  bottom: -50px;
+  bottom: -120px;
   transform: translateY(100px);
-  transition: opacity 1s, transform 2s;
+  transition: opacity 0.4s, transform 1.5s;
 }
 
 .thread::before {

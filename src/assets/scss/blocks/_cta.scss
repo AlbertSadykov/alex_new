@@ -11,9 +11,17 @@
   z-index: 100;
   width: 100%;
   background: $white;
-  transform: translateY(100px);
-  transition: opacity 1s, transform 1s;
-  
+
+  transition: opacity 1s, margin 2s;
+
+
+}
+
+
+.flex{
+  display: flex;
+  padding: 30px 0;
+  margin-bottom: 200px;
 }
 
 
