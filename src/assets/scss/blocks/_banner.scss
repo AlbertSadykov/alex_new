@@ -4,6 +4,7 @@
   background-size: cover;
   background-position-y: -100px;
   overflow: hidden;
+  position: relative;
 }
 
 .layer__header{
@@ -11,7 +12,7 @@
   display: flex;
   justify-content: center;
 
-  h1{
+  h1{ 
     text-align: center;
     margin-bottom: 48px;
   }
@@ -30,44 +31,84 @@
   z-index: 10;
 }
 
-.layers__caption {
-  opacity: 1;
-  transition: opacity 2s ease, transform 1s ease;
+.layers{
+  z-index: 999;
 }
 
-.layers__caption.hidden {
-  opacity: 0;
+.layer__header {
+  position: relative;
+  z-index: 999;
+  transition:  1s ease;
+}
+
+.layer__header.hidden {
   transform: translateY(-100%);
-}
-
+  opacity: 0;
+} 
 
 .layer__img{
-  position: relative;
 
   z-index: 2;
   height: 80vh;
 }
 
 .machine{
-  display: block;
+  background-image: url(/assets/images/parallax/Sewing-machine\ \(1\).png);
+  background-size:100% auto;
+
+  background-repeat: no-repeat;
+  background-position:0 280px;
+  height: 100%;
+
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0 auto;
-  width: 1470px;
-  max-width: 100vw;
+  
   z-index: 2;
+  transition: background-position 1s ease; /* Добавляем плавную анимацию изменения background-position */
+
+
 
 }
 
-.thread{
-  width: 341px;
-  max-width: 100%;
-  z-index: 3;
+
+.gradient {
   position: absolute;
-  right: 70%;
-  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: .4s linear;
+}
+
+
+
+
+.thread{
+  position: absolute;
+  width: 541px;
+  max-width: 100%;
+  z-index: 10;
+  right: 60%;
+  bottom: -50px;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 2s;
+}
+
+.thread::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 
