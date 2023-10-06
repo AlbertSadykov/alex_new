@@ -1,10 +1,9 @@
-.parallax__section{
+.parallax__section {
   position: relative;
 }
 
-.section_cta{
+.section_cta {
   position: relative;
-  margin-top: -35px;
   padding: 56px 0 113px;
   border-radius: 40px 40px 0 0;
   bottom: 0;
@@ -17,14 +16,153 @@
 
 }
 
-
-.flex{
+.cta {
   display: flex;
-  padding: 30px 0;
-  margin-bottom: 200px;
+  justify-content: space-between;
+}
+
+.subtitle {
+  margin-right: 140px;
 }
 
 
 
 
+// форма обратной связи
+.form-container {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.column {
+
+  margin-right: 44px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.column textarea {
+  box-sizing: border-box;	
+  max-width: 100%;
+  width: 491px; 
+  height: 112px;
+  margin-bottom: 17px;
+  resize: none;
+
+  @media (max-width:1200px){
+    width: 400px;
+  }
+
+  @media (max-width:1000px){
+    width: 300px;
+  }
+}
+
+
+.submit-button {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid $grey;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 16px 24px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+
+
+
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cta__button {
+  font-family: inherit;
+  display: block;
+  padding: 16px 40px;
+  cursor: pointer;
+  color: $white;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 67px;
+}
+
+.column-button {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.checkbox:checked {
+  
+  background: url(/assets/images/Vector.svg); 
+  background-size: contain;
+  background-position:center;
+  background-repeat: no-repeat;
+  
+}
+
+
+
+
+
+.form-agreement {
+  display: flex;
+  align-items: flex-start;
+
+
+  input {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    display: block;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 16px;
+
+  }
+
+}
 

@@ -14,6 +14,7 @@
     <meta name="description" content="">
     
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     
     <title>Швейное производство Alex-Style</title>
@@ -78,37 +79,338 @@
             </h2> 
         
             <div class="form">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi corrupti excepturi enim ex officia, aspernatur molestias veritatis ab aperiam impedit dolores consequuntur quaerat id aut, sapiente officiis quis ad delectus.</p>
+              <form action="обработчик.php" method="post" >
+                <div class="form-container">
+                    <div class="column">
+                        <input type="text" name="name" placeholder="Имя" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="column">
+                        <textarea name="message" placeholder="Сообщение" required></textarea>
+                        <div class="column-button">
+                          
+    
+                            <input type="submit" class="button cta__button">
+    
+                            <div class="form-agreement">
+                              <label class="agreement">
+                                 <input class="checkbox" type="checkbox" id="agree" required>
+                                </label>
+                                 <label class="span__agreement" for="">
+                                  <span>Даю согласие на обработку моих персоналах данных </span>
+                                 </label>
+                              
+                           </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </form>
             </div>
+    
           </div>
         </div>
       </section>
     </div>
     
-    <div class="test">
+    
+    <!-- продукция -->
+    <div class="section">
       <div class="container">
-        <div class="flex">
-          <div class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum pariatur eaque nam repellat magni illum nostrum soluta aut. Modi omnis voluptatem atque cum id laborum libero laudantium temporibus, in dolorem!
-          </div>
-          <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam autem, facere, deleniti ullam dicta eum explicabo, minus sunt pariatur itaque voluptates quia debitis officiis beatae eligendi odio veritatis at ab!</div>
-        </div>
+       <div class="our__products">
+        <h2 class="title">Наша продукция</h2>
     
-        <div class="flex">
-          <div class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum pariatur eaque nam repellat magni illum nostrum soluta aut. Modi omnis voluptatem atque cum id laborum libero laudantium temporibus, in dolorem!
-          </div>
-          <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam autem, facere, deleniti ullam dicta eum explicabo, minus sunt pariatur itaque voluptates quia debitis officiis beatae eligendi odio veritatis at ab!</div>
-        </div>
+        <div class="products__block">
     
-        <div class="flex">
-          <div class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum pariatur eaque nam repellat magni illum nostrum soluta aut. Modi omnis voluptatem atque cum id laborum libero laudantium temporibus, in dolorem!
+          <div class="products__item">
+            <img src="/assets/images/products/1.jpg" alt="">
+            <p>Блузки</p>
           </div>
-          <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam autem, facere, deleniti ullam dicta eum explicabo, minus sunt pariatur itaque voluptates quia debitis officiis beatae eligendi odio veritatis at ab!</div>
+    
+          <div class="products__item">
+            <img src="/assets/images/products/2.jpg" alt="">
+            <p>Платья</p>
+          </div>
+    
+          <div class="products__item">
+            <img src="/assets/images/products/3.jpg" alt="">
+            <p>Трикотаж</p>
+          </div>
+    
+          <div class="products__item">
+            <img src="/assets/images/products/4.jpg" alt="">
+            <p>Юбки</p>
+          </div>
+    
+          <div class="products__item">
+            <img src="/assets/images/products/5.jpg" alt="">
+            <p>Жакеты</p>
+          </div>
+    
+          <div class="products__item">
+            <img src="/assets/images/products/6.jpg" alt="">
+            <p>Пальто</p>
+          </div>
+    
+    
+    
+        </div>
+       </div>
+      </div>
+    </div>
+    
+    
+    <!-- материалы -->
+    <div class="section section--grey">
+    
+      <div class="container">
+        <h2 class="title title--math">Материалы</h2>
+        <div class="materials">
+          <div class="materials__names">
+            <ul>
+              <li class="math__active" data-target="item-1">
+                <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                  <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                  </svg>
+                  <h4>Хлопок</h4>              
+              </li>
+              <li data-target="item-2">
+                <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                  <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                  </svg>
+                  <h4>Лен</h4>              
+              </li>
+              <li data-target="item-3">
+                <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                  <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                  </svg>
+                  <h4>Вискоза</h4>              
+              </li>
+              <li data-target="item-4">
+                <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                  <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                  </svg>
+                  <h4>Шелк</h4>              
+              </li>
+              <li data-target="item-5">
+                <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                  <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                  </svg>
+                  <h4>Шерсть</h4>              
+              </li>
+              <li data-target="item-6">
+                <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                  <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                  </svg>
+                  <h4>Акрил</h4>              
+              </li>
+            </ul>
+          </div>
+    
+          <div class="materials__item" id="item-1">
+            <div class="materials__photo">
+              <img class="materials__img" src="/assets/images/hlopok.jpg" alt="Хлопок">
+            </div>
+            <div class="materials__slide">
+              <div class="materials__carousel">
+                <div class="img__nav">
+                  <img class="img__thumb" src="/assets/images/hlopok-1.jpg" 
+                  alt="">
+                  <img class="img__thumb" src="/assets/images/len-1.jpg" alt="">
+               
+                </div>
+      
+                <div class="nav__arrows">
+                  <img class="prev" src="/assets/images/left.svg" alt="">
+                  <img class="next" src="/assets/images/right.svg" alt="">
+                </div>
+              </div>
+              
+              <p class="materials__descr">Хлопок — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+              <h4>Преимущества</h4>
+              <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+            </div>
+          </div>
+    
+          <div class="materials__item" id="item-2">
+            <div class="materials__photo">
+              <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
+            </div>
+            <div class="materials__slide">
+              <div class="materials__carousel">
+                <div class="img__nav">
+                  <img class="img__thumb" src="/assets/images/len-1.jpg" 
+                  alt="">
+                  <img class="img__thumb" src="/assets/images/hlopok-1.jpg" alt="">
+               
+                </div>
+      
+                <div class="nav__arrows">
+                  <img class="prev" src="/assets/images/left.svg" alt="">
+                  <img class="next" src="/assets/images/right.svg" alt="">
+                </div>
+              </div>
+              
+              <p class="materials__descr">Лен — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+              <h4>Преимущества</h4>
+              <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+            </div>
+          </div>
+    
+          <div class="materials__item" id="item-3">
+            <div class="materials__photo">
+              <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
+            </div>
+            <div class="materials__slide">
+              <div class="materials__carousel">
+                <div class="img__nav">
+                  <img class="img__thumb" src="/assets/images/hlopok-1.jpg" 
+                  alt="">
+                  <img class="img__thumb" src="/assets/images/len-1.jpg" alt="">
+               
+                </div>
+      
+                <div class="nav__arrows">
+                  <img class="prev" src="/assets/images/left.svg" alt="">
+                  <img class="next" src="/assets/images/right.svg" alt="">
+                </div>
+              </div>
+              
+              <p class="materials__descr">Вискоза — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+              <h4>Преимущества</h4>
+              <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+            </div>
+          </div>
+    
+          <div class="materials__item" id="item-4">
+            <div class="materials__photo">
+              <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
+            </div>
+            <div class="materials__slide">
+              <div class="materials__carousel">
+                <div class="img__nav">
+                  <img class="img__thumb" src="/assets/images/len-1.jpg" 
+                  alt="">
+                  <img class="img__thumb" src="/assets/images/len-2.jpg" alt="">
+               
+                </div>
+      
+                <div class="nav__arrows">
+                  <img class="prev" src="/assets/images/left.svg" alt="">
+                  <img class="next" src="/assets/images/right.svg" alt="">
+                </div>
+              </div>
+              
+              <p class="materials__descr">Шёлк — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+              <h4>Преимущества</h4>
+              <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+            </div>
+          </div>
+    
+          <div class="materials__item" id="item-5">
+            <div class="materials__photo">
+              <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
+            </div>
+            <div class="materials__slide">
+              <div class="materials__carousel">
+                <div class="img__nav">
+                  <img class="img__thumb" src="/assets/images/len-1.jpg" 
+                  alt="">
+                  <img class="img__thumb" src="/assets/images/len-2.jpg" alt="">
+               
+                </div>
+      
+                <div class="nav__arrows">
+                  <img class="prev" src="/assets/images/left.svg" alt="">
+                  <img class="next" src="/assets/images/right.svg" alt="">
+                </div>
+              </div>
+              
+              <p class="materials__descr">Шерсть — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+              <h4>Преимущества</h4>
+              <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+            </div>
+          </div>
+    
+          <div class="materials__item" id="item-6">
+            <div class="materials__photo">
+              <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
+            </div>
+            <div class="materials__slide">
+              <div class="materials__carousel">
+                <div class="img__nav">
+                  <img class="img__thumb" src="/assets/images/len-1.jpg" 
+                  alt="">
+                  <img class="img__thumb" src="/assets/images/len-2.jpg" alt="">
+               
+                </div>
+      
+                <div class="nav__arrows">
+                  <img class="prev" src="/assets/images/left.svg" alt="">
+                  <img class="next" src="/assets/images/right.svg" alt="">
+                </div>
+              </div>
+              
+              <p class="materials__descr">Акрил — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+              <h4>Преимущества</h4>
+              <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
+    
+    <!-- как мы работаем -->
+    <div class="section">
+      <div class="container">
+        <h2 class="title">Как мы работаем</h2>
+    
+        <div class="about__block">
+          <div class="about__item">
+            <img src="/assets/images/about/2.jpg" alt="">
+            <div class="about__item-content">
+              <p class="about__item-title">Пошив одежды для бренда</p>
+            <p class="about__item-descr">Вы можете сосредоточиться на дизайне, не переживая о технических аспектах и реализации</p>
+            </div>
+          </div>
+    
+          <div class="about__item">
+            <img src="/assets/images/about/3.jpg" alt="">
+            <div class="about__item-content">
+              <p class="about__item-title">Изготовление лекал</p>
+            <p class="about__item-descr">Наш богатый опыт и экспертность дают возможность выполнять нестандартные и сложные заказы</p>
+            </div>
+          </div>
+    
+          <div class="about__item">
+            <img src="/assets/images/about/4.jpg" alt="">
+            <div class="about__item-content">
+              <p class="about__item-title">Профессиональный раскрой</p>
+            <p class="about__item-descr">Мы предоставляем услуги по единичному крою образцов и раскрою партий изделий настилами</p>
+            </div>
+          </div>
+    
+          <div class="about__item">
+            <img src="/assets/images/about/5.jpg" alt="">
+            <div class="about__item-content">
+              <p class="about__item-title">Современное оборудование</p>
+            <p class="about__item-descr">Наше производство оборудовано современными специализированными машинками</p>
+            </div>
+          </div>
+    
+        </div>
+    
+        <div class="section__button">
+          <button class="button">
+            <a href="#">оформить заявку</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
     
     
 

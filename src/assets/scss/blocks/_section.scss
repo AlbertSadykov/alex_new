@@ -1,0 +1,12 @@
+.section{
+  padding: 104px 0;
+
+  &--grey{
+    background: $lightgrey;
+  }
+}
+
+.section__button{
+  display: flex;
+  justify-content: center;
+}

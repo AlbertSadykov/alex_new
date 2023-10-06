@@ -7,6 +7,10 @@
 @import 'blocks/header';
 @import 'blocks/banner';
 @import 'blocks/cta';
+@import 'blocks/section';
+@import 'blocks/products';
+@import 'blocks/materials';
+@import 'blocks/about';
 
 
 *,::after,::before{
@@ -41,4 +45,12 @@ h1{
 h2{
     font-size: 56px;
     line-height: 64px;
+}
+
+.title{
+    margin-bottom: 56px;
+
+    &--math{
+        margin-bottom: 48px;
+    }
 }
