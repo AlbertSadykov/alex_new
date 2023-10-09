@@ -30,6 +30,10 @@
   background: $white;
   border: 0;
   transition: .2s linear;
+
+  @media (max-width:757px){
+    width: 100%;
+  }
   
 
   a{
@@ -43,6 +47,10 @@
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+
+    @media (max-width:757px){
+      width: 100%;
+    }
   }
 
   &:hover{

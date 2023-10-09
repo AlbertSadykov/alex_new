@@ -13,6 +13,12 @@
 
   transition: opacity 1s, margin 2s;
 
+  @include breakpoint($mobile-bp){
+    border-radius: 10px 10px 0 0;
+  }
+
+
+  
 
 }
 
@@ -23,6 +29,7 @@
 
 .subtitle {
   margin-right: 140px;
+  margin-top: -20px;
 }
 
 
@@ -134,8 +141,8 @@ input[type="email"] {
 
 .checkbox:checked {
   
-  background: url(/assets/images/Vector.svg); 
-  background-size: contain;
+  background: url(/assets/images/Checkbox.svg); 
+  background-size: auto;
   background-position:center;
   background-repeat: no-repeat;
   

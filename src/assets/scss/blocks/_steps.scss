@@ -1,0 +1,31 @@
+.steps{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  margin-bottom: 56px;
+}
+
+
+.step__item {
+  background-color: $white;
+  border-radius: 8px;
+  flex: 1;
+  min-width: calc(25% - 24px);
+  padding: 32px 32px 40px 32px;
+
+  img{
+    margin-bottom: 24px;
+  }
+}
+
+.text-bold{
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.last__icon{
+  padding: 10px 0;
+}

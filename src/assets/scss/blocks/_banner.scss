@@ -5,6 +5,16 @@
   background-position-y: -100px;
   overflow: hidden;
   position: relative;
+
+  @include breakpoint($tablet-bp){
+    background-position: bottom;
+  }
+
+  @include breakpoint($mobile-bp){
+    background: url(/assets/images/mob-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .layer__header{
@@ -12,9 +22,17 @@
   display: flex;
   justify-content: center;
 
+  @include breakpoint($mobile-bp){
+    margin-top: 48px;
+  }
+
   h1{ 
     text-align: center;
     margin-bottom: 48px;
+
+    @include breakpoint($mobile-bp){
+      margin-bottom: 32px;
+    }
   }
 
   button{
@@ -33,11 +51,15 @@
 
 .layers{
   z-index: 20;
+
+  @include breakpoint($mobile-bp){
+   margin-bottom: 110px !important;
+  }
 }
 
 .layer__header {
   position: relative;
-  z-index: 20;
+  z-index: 19;
   transition:  1.5s ease;
 }
 
@@ -50,7 +72,17 @@
 
   z-index: 2;
   height: 80vh;
+
+
+
+  @include breakpoint($desktop-bp){
+    height: 70vh;
+  }
+
+
 }
+
+
 
 .machine{
   background-image: url(/assets/images/parallax/Sewing-machine.png);
@@ -67,6 +99,11 @@
   
   z-index: 2;
   transition: background-position 1s ease; /* Добавляем плавную анимацию изменения background-position */
+
+  @include breakpoint($tablet-bp){
+    background-position:bottom;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
 
 
 
@@ -97,6 +134,17 @@
   bottom: -120px;
   transform: translateY(100px);
   transition: opacity 0.4s, transform 1.5s;
+
+  @include breakpoint($tablet-bp){
+    width: 300px;
+    bottom: -60px;
+  }
+
+  @include breakpoint($mobile-bp){
+    width: 100px;
+    bottom: -60px;
+
+  }
 }
 
 .thread::before {

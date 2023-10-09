@@ -98,3 +98,6 @@ window.addEventListener('resize', setMaxHeight);
 
 // одинаковая высота блоков
 
+
+
+

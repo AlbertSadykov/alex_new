@@ -1,0 +1,44 @@
+.heading__complex{
+  width: 50%;
+  margin-bottom: 64px;
+}
+
+
+.complex__content{
+  display: flex;
+  gap: 154px;
+  align-items: center;
+}
+
+.complex__image{
+  img{
+    height: 512px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.complex__text {
+  max-width: 620px;
+  width: 100%;
+}
+
+.pro__features {
+
+  img{
+    margin-bottom: 16px;
+  }
+
+  margin-bottom: 40px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+  
+  h3{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  }
+}

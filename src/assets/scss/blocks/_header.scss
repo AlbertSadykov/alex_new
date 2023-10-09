@@ -16,10 +16,20 @@
 .menu{
   display: flex;
   align-items: center;
-  gap: 70px;
+  
 }
 
 .nav {
+
+  margin-right: 70px;
+
+  @include breakpoint($notebook-bp){
+    margin-right: 0;
+  }
+
+  @include breakpoint($tablet-bp){
+    display: none;
+  }
 
   ul{
     display: flex;
@@ -49,4 +59,126 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+
+  @include breakpoint($notebook-bp){
+    display: none;
+  }
+}
+
+
+// бургер меню
+
+.header__nav{
+  display: none;
+
+  @include breakpoint($tablet-bp){
+    display: block;
+  }
+}
+
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:602;
+	overflow: hidden;
+  cursor:pointer;
+}
+
+.menu-btn .bar {
+  
+	width: 25px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  border-radius: 4px;
+	transform: translate(-50%, -50%);
+	background-color: $black;
+	transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+	top: calc(50% - 9px);
+}
+.menu-btn .bar:nth-of-type(3) {
+	top: calc(50% + 9px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active__burger .bar:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active__burger .bar:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+.menu-btn.active__burger .bar:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
+
+/* Меню, которое будет появляться */
+.mobile__nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 60%;
+	height: auto;
+	padding: 15px;
+  background: $white;
+	transform: translateX(100%);
+	transition: transform 0.5s; 
+  z-index: 600px;
+  border-radius: 8px 0 0 8px;
+}
+
+.mobile__nav.active__burger {
+	transform: translateX(0);
+}
+
+.mobile__nav .nav__list_item {
+	list-style-type: none;
+}
+
+.nav__list{
+  
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+
+    list-style-type: none;
+
+    li{
+      margin-bottom: 8px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+      a{
+
+        font-size: 14px;
+        line-height: 24px;
+        text-decoration: none;
+        color:$black;
+      }
+    }
+
+}
+
+
+.callback__mobile{
+display: noen;
+
+@include breakpoint($tablet-bp){
+  display: block;
+  margin-top: 20px;
+
+  a{
+    font-size: 18px !important;
+    color:$black;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
 }
