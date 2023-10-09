@@ -71,12 +71,12 @@
 .layer__img{
 
   z-index: 2;
-  height: 80vh;
+  height:80vh;
 
 
 
-  @include breakpoint($desktop-bp){
-    height: 70vh;
+  @include breakpoint($tablet-bp){
+    height: auto;
   }
 
 
