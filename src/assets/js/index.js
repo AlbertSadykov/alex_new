@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// одинаковая высота блоков
 function setMaxHeight() {
   // Получаем все элементы .about__item-content
   const itemContents = document.querySelectorAll('.about__item-content');
@@ -92,11 +91,40 @@ function setMaxHeight() {
   });
 }
 
-// Вызываем функцию при загрузке страницы и при изменении размеров окна
-window.addEventListener('load', setMaxHeight);
-window.addEventListener('resize', setMaxHeight);
+function handleWindowResize() {
+  if (window.innerWidth > 991) {
+    setMaxHeight();
+  } else {
+    const itemContents = document.querySelectorAll('.about__item-content');
+    itemContents.forEach(itemContent => {
+      itemContent.style.height = 'auto'; // В мобильной версии сбрасываем установленную высоту
+    });
+  }
+}
 
-// одинаковая высота блоков
+// Вызываем функцию при загрузке страницы и при изменении размеров окна
+window.addEventListener('load', handleWindowResize);
+window.addEventListener('resize', handleWindowResize);
+
+
+// плавный скролл
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop - 100; // Поднимаем на 50 пикселей выше
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 
 
 

@@ -14,6 +14,7 @@
   transition: opacity 1s, margin 2s;
 
   @include breakpoint($mobile-bp){
+    padding: 40px 0 16px;
     border-radius: 10px 10px 0 0;
   }
 
@@ -25,11 +26,31 @@
 .cta {
   display: flex;
   justify-content: space-between;
+
+
+  @include breakpoint ($tablet-bp){
+    flex-direction: column;
+  }
 }
 
 .subtitle {
   margin-right: 140px;
   margin-top: -20px;
+
+  @include breakpoint ($notebook-bp){
+   margin-right: 50px;
+  }
+
+  @include breakpoint ($tablet-bp){
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+
+  @include breakpoint ($mobile-bp){
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
 }
 
 
@@ -40,6 +61,9 @@
   display: flex;
   justify-content: space-between;
 
+  @include breakpoint($mobile-bp){
+    flex-direction: column;
+  }
 
 }
 
@@ -48,6 +72,10 @@
   margin-right: 44px;
 
   &:last-child {
+    margin-right: 0;
+  }
+
+  @include breakpoint($mobile-bp){
     margin-right: 0;
   }
 }
@@ -60,13 +88,25 @@
   margin-bottom: 17px;
   resize: none;
 
-  @media (max-width:1200px){
+  @include breakpoint ($desktop-bp){
+    width: 450px;
+  }
+
+  @include breakpoint ($desktop2-bp){
     width: 400px;
   }
 
-  @media (max-width:1000px){
-    width: 300px;
+  @include breakpoint($mobile-bp){
+    width: 100%;
   }
+
+  @include breakpoint($mobile-bp){
+   height: 72px;
+   margin-bottom: 4px;
+  }
+
+  
+
 }
 
 
@@ -91,6 +131,11 @@ textarea {
   &:focus {
     outline: none;
   }
+
+
+  @include breakpoint($mobile-bp){
+    font-size: 14px;
+  }
 }
 
 
@@ -105,6 +150,14 @@ input[type="email"] {
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include breakpoint($mobile-bp){
+   margin-bottom: 4px;
+
+   &:last-child{
+    margin-bottom: 4px;
+   }
+  }
 }
 
 .cta__button {
@@ -118,11 +171,22 @@ input[type="email"] {
   font-weight: 700;
   text-transform: uppercase;
   margin-right: 67px;
+
+  @include breakpoint($mobile-bp){
+    width: 100%;
+   }
 }
 
 .column-button {
   display: flex;
   justify-content: flex-start;
+
+
+  @include breakpoint($mobile-bp){
+   display: flex;
+   flex-direction: column-reverse;
+   gap: 16px;
+  }
 }
 
 .checkbox {

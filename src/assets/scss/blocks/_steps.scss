@@ -4,6 +4,12 @@
   gap: 24px;
 
   margin-bottom: 56px;
+
+  @include breakpoint($tablet-bp){
+   flex-direction: column;
+   gap: 8px;
+   margin-bottom: 16px;
+   }
 }
 
 
@@ -14,8 +20,17 @@
   min-width: calc(25% - 24px);
   padding: 32px 32px 40px 32px;
 
+  @include breakpoint($tablet-bp){
+    padding: 16px;
+    }
+
   img{
     margin-bottom: 24px;
+
+    @include breakpoint($tablet-bp){
+      width: 48px;
+      margin-bottom: 8px;
+      }
   }
 }
 
@@ -24,6 +39,19 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+
+  @include breakpoint ($mobile-bp){
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 4px;
+   }
+}
+
+.text-descr{
+  @include breakpoint ($mobile-bp){
+    font-size: 12px;
+    line-height: 16px;
+   }
 }
 
 .last__icon{

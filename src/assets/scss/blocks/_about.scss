@@ -4,6 +4,11 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   margin-bottom: 64px;
+
+  @include breakpoint($mobile-bp){
+    grid-gap: 16px;
+    margin-bottom: 16px;
+   }
 }
 
 .about__item {
@@ -19,6 +24,10 @@
     object-fit: cover;
 
     border-radius: 8px 8px 0 0;
+
+    @include breakpoint($mobile-bp){
+      height: 218px;
+     }
   }
 }
 
@@ -26,6 +35,11 @@
   padding: 24px 24px 32px 24px;
   background-color: $lightgrey;
   border-radius: 0 0 8px 8px;
+
+
+  @include breakpoint($mobile-bp){
+   padding: 8px 16px 16px 16px;
+  }
 }
 
 .about__item-title {
@@ -33,6 +47,11 @@
   line-height: 24px;
   margin-bottom: 8px;
   font-weight: 700;
+
+  @include breakpoint($mobile-bp){
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 
@@ -42,6 +61,12 @@
   flex-wrap: wrap;
   gap:155px;
   margin-bottom: 56px;
+
+  @include breakpoint($tablet-bp){
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 32px;
+    }
 }
 
 .title {
@@ -58,6 +83,10 @@
   overflow: scroll;
   scrollbar-width: none;
 
+  @include breakpoint($tablet-bp){
+   height: auto;
+    }
+
 }
 
 .about__right::-webkit-scrollbar {
@@ -69,12 +98,22 @@
   width: 100%;
   margin-bottom: 80px;
 
+  @include breakpoint ($mobile-bp){
+    margin-bottom: 24px;
+   }
+
   &:last-child {
     margin-bottom: 0;
   }
 
   p {
     margin-bottom: 30px;
+
+    @include breakpoint ($mobile-bp){
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 8px;
+     }
 
     &:last-child {
       margin-bottom: 0;
@@ -89,4 +128,16 @@
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 40px;
+
+  @include breakpoint($tablet-bp){
+   width: 300px;
+     }
+    
+
+     @include breakpoint($mobile-bp){
+      display: block;
+      margin: 0 auto;
+      width: 160px;
+      margin-bottom: 16px;
+        }
 }

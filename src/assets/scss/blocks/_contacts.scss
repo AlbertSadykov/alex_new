@@ -2,6 +2,14 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+
+  
+  @include breakpoint($tablet-bp){
+    flex-direction: column;
+    padding-top: 32px;
+    align-items: inherit;
+   
+        }
 }
 
 .contacts__content {
@@ -10,11 +18,22 @@
 
 .contacts__body{
   width: 48%;
+
+  @include breakpoint($tablet-bp){
+    width: 100%;
+   margin-bottom: 16px;
+        }
 }
 
 .contacts__map {
   flex: 0 0 62%;
   transform: translate(-100%, 0px);
+
+  @include breakpoint($tablet-bp){
+    flex: 0 0 55%;
+    transform: none;
+   
+        }
 
 }
 
@@ -29,18 +48,33 @@
   &:hover {
     filter: none;
   }
+
+  @include breakpoint($tablet-bp){
+    height: 324px;
+   
+        }
 }
 
 .address {
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 32px;
+
+  @include breakpoint($mobile-bp){
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
 }
 
 .contact__details {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include breakpoint($mobile-bp){
+    gap: 8px;
+  }
 }
 
 .details__item {
@@ -51,6 +85,10 @@
   img {
     max-width: 32px;
     width: 100%;
+
+    @include breakpoint($mobile-bp){
+      max-width: 24px;
+    }
   }
 
   a {
@@ -59,6 +97,12 @@
     text-decoration: none;
     color: inherit;
     transition: .2s linear;
+
+    @include breakpoint($mobile-bp){
+      font-size: 16px;
+      line-height: 24px;
+
+    }
 
     &:hover {
       color: $primary;

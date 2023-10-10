@@ -11,6 +11,10 @@
       align-items: center;
       margin-bottom: 40px;
 
+      @include breakpoint($mobile-bp){
+        margin-bottom: 15px;
+       }
+
       &:last-child{
         margin-bottom: 0;
       }
@@ -21,6 +25,10 @@
         border:2px solid $black;
         border-radius: 50%;
         transition: transform 0.5s, fill 0.5s;
+
+        @include breakpoint($mobile-bp){
+        width: 32px;
+        }
 
         &:hover{
           cursor: pointer;
@@ -33,6 +41,12 @@
         font-size: 24px;
         line-height: 40px;
         font-weight: 300;
+
+        @include breakpoint($mobile-bp){
+          font-size: 18px;
+          
+          margin-left: 16px;
+         }
       }
     }
   }
@@ -71,6 +85,10 @@
 
 .materials__item{
   display: flex;
+
+  @include breakpoint($tablet-bp){
+   flex-direction: column;     
+  }
 }
 
 
@@ -78,10 +96,23 @@
 .materials__photo{
   margin:0 153px;
 
+  @include breakpoint($tablet-bp){
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+   }
+
   img{
     border-radius: 50%;
     width: 100%;
     height: auto;
+
+
+
+    @include breakpoint($tablet-bp){
+    width: 206px;
+   }
   }
 }
 
@@ -91,11 +122,43 @@
   h4{
     font-size: 18px;
     margin-bottom: 8px;
+
+    @include breakpoint($mobile-bp){
+     font-size: 12px;  
+     line-height: 16px;
+     margin-bottom: 4px; 
+    }
+  }
+
+  @include breakpoint($tablet-bp){
+    display: flex;
+    flex-direction: column-reverse;
+        max-width: 100%;
+        margin-bottom: 24px;
+  }
+
+  p{
+
+    @include breakpoint($mobile-bp){
+     font-size: 12px;
+     line-height: 16px;   
+    }
+  }
+}
+
+.slide__descr{
+  @include breakpoint($tablet-bp){
+   margin-bottom: 16px;     
   }
 }
 
 .materials__descr{
   padding: 32px 0 40px;
+
+  @include breakpoint($tablet-bp){
+  padding: 0;
+  margin-bottom: 8px;
+  }
 }
 
 .img__thumb{
@@ -103,16 +166,37 @@
   height: 214px;
   object-fit: cover;
   border-radius: 8px;
+
+  @include breakpoint($tablet-bp){
+    
+    height: 300px;
+    width: 100%;
+  }
+
+  @include breakpoint($mobile-bp){
+    
+    height: auto;
+    width: 100%;
+  }
 }
 
 .materials__carousel{
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint($tablet-bp){
+    flex-direction: column;
+  }
 }
 
 .img__nav{
 
+
+  @include breakpoint($tablet-bp){
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .nav__arrows{
@@ -125,6 +209,8 @@
       margin-right: 0;
     }
   }
+
+ 
 }
 
 
@@ -152,3 +238,5 @@
 .next {
   z-index: 0;
 }
+
+

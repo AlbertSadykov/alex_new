@@ -52,8 +52,13 @@
 .layers{
   z-index: 20;
 
+  @include breakpoint($tablet-bp){
+    margin-bottom: 700px;
+  }
+
+
   @include breakpoint($mobile-bp){
-   margin-bottom: 110px !important;
+    margin-bottom: 340px;
   }
 }
 
@@ -61,6 +66,9 @@
   position: relative;
   z-index: 19;
   transition:  1.5s ease;
+
+
+
 }
 
 .layer__header.hidden {
@@ -72,6 +80,23 @@
 
   z-index: 2;
   height:80vh;
+
+  @include breakpoint ($desktop-bp){
+    height: 70vh;
+  }
+
+  @include breakpoint ($desktop2-bp){
+    height: 52vh;
+  }
+
+
+  @include breakpoint ($notebook-bp){
+    height: 50vh;
+  }
+
+  @media (max-width:1140px){
+    height: 41vh;
+  }
 
 
 
@@ -85,7 +110,7 @@
 
 
 .machine{
-  background-image: url(/assets/images/parallax/Sewing-machine.png);
+  background-image: url(../images/parallax/Sewing-machine.png);
   background-size:100% auto;
 
   background-repeat: no-repeat;
@@ -96,16 +121,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  
+  -webkit-filter: drop-shadow(0 4px 4px #22222271);
   z-index: 2;
   transition: background-position 1s ease; /* Добавляем плавную анимацию изменения background-position */
 
   @include breakpoint($tablet-bp){
-    background-position:bottom;
+    bottom: -200px;
+
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
+  @media (max-width: 876px){
+    bottom: -385px;
+  }
 
+  @include breakpoint ($mobile-bp){
+    bottom: -210px;
+  }
 
 }
 

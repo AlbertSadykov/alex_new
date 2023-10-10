@@ -49,9 +49,9 @@ title: Швейное производство Alex-Style
 
 
 <!-- продукция -->
-<div class="section">
+<div class="section section--mobile-section">
   <div class="container">
-   <div class="our__products">
+   <div class="our__products" id="products">
     <h2 class="title">Наша продукция</h2>
 
     <div class="products__block">
@@ -95,7 +95,7 @@ title: Швейное производство Alex-Style
 
 
 <!-- материалы -->
-<div class="section section--grey">
+<div class="section section--grey section--mobile32" id="matherials">
 
   <div class="container">
     <h2 class="title title--math">Материалы</h2>
@@ -108,6 +108,9 @@ title: Швейное производство Alex-Style
               </svg>
               <h4>Хлопок</h4>              
           </li>
+
+
+
           <li data-target="item-2">
             <svg class="icon__plus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
               <g fill="#1E1928" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
@@ -147,7 +150,7 @@ title: Швейное производство Alex-Style
         </div>
         <div class="materials__slide">
           <div class="materials__carousel">
-            <div class="img__nav">
+            <div class="img__nav" id="carousel">
               <img class="img__thumb" src="/assets/images/hlopok-1.jpg" 
               alt="">
               <img class="img__thumb" src="/assets/images/len-1.jpg" alt="">
@@ -160,9 +163,11 @@ title: Швейное производство Alex-Style
             </div>
           </div>
           
-          <p class="materials__descr">Хлопок — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
-          <h4>Преимущества</h4>
-          <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+          <div class="slide__descr">
+            <p class="materials__descr">Хлопок — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
+            <h4>Преимущества</h4>
+            <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+          </div>
         </div>
       </div>
 
@@ -184,12 +189,13 @@ title: Швейное производство Alex-Style
               <img class="next" src="/assets/images/right.svg" alt="">
             </div>
           </div>
-          
+          <div class="slide__descr">
           <p class="materials__descr">Лен — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
           <h4>Преимущества</h4>
           <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
         </div>
       </div>
+    </div>
 
       <div class="materials__item" id="item-3">
         <div class="materials__photo">
@@ -210,12 +216,13 @@ title: Швейное производство Alex-Style
             </div>
           </div>
           
+          <div class="slide__descr">
           <p class="materials__descr">Вискоза — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
           <h4>Преимущества</h4>
           <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
         </div>
       </div>
-
+    </div>
       <div class="materials__item" id="item-4">
         <div class="materials__photo">
           <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
@@ -234,13 +241,14 @@ title: Швейное производство Alex-Style
               <img class="next" src="/assets/images/right.svg" alt="">
             </div>
           </div>
-          
+
+          <div class="slide__descr">
           <p class="materials__descr">Шёлк — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
           <h4>Преимущества</h4>
           <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
         </div>
       </div>
-
+</div>
       <div class="materials__item" id="item-5">
         <div class="materials__photo">
           <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
@@ -260,12 +268,13 @@ title: Швейное производство Alex-Style
             </div>
           </div>
           
+          <div class="slide__descr">
           <p class="materials__descr">Шерсть — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
           <h4>Преимущества</h4>
           <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
         </div>
       </div>
-
+    </div>
       <div class="materials__item" id="item-6">
         <div class="materials__photo">
           <img class="materials__img" src="/assets/images/len.jpg" alt="Лен">
@@ -284,10 +293,11 @@ title: Швейное производство Alex-Style
               <img class="next" src="/assets/images/right.svg" alt="">
             </div>
           </div>
-          
+          <div class="slide__descr">
           <p class="materials__descr">Акрил — одно из самых экологически чистых волокон в текстильном мире. Он прекрасно растет и практически не требует орошения, пестицидов и других химических веществ.</p>
           <h4>Преимущества</h4>
           <p class="advantages">Антибактериальный, удобный, прочный, дышащий.</p>
+        </div>
         </div>
       </div>
     </div>
@@ -296,7 +306,7 @@ title: Швейное производство Alex-Style
 
 
 <!-- как мы работаем -->
-<div class="section">
+<div class="section section--mobile32">
   <div class="container">
     <h2 class="title">Как мы работаем</h2>
 
@@ -337,14 +347,14 @@ title: Швейное производство Alex-Style
 
     <div class="section__button">
       <button class="button">
-        <a href="#">оформить заявку</a>
+        <a href="#cta__footer">оформить заявку</a>
       </button>
     </div>
   </div>
 </div>
 
 <!-- этапы производства -->
-<div class="section section--grey">
+<div class="section section--grey section--mobile32" id="steps">
   <div class="container">
     <h2 class="title">Этапы производства</h2>
     <div class="steps">
@@ -399,7 +409,7 @@ title: Швейное производство Alex-Style
 
     <div class="section__button">
       <button class="button">
-        <a href="#">оформить заявку</a>
+        <a href="#cta__footer">оформить заявку</a>
       </button>
     </div>
   </div>
@@ -426,7 +436,7 @@ title: Швейное производство Alex-Style
   </div>
 </div>
 
-<div class="section section--grey">
+<div class="section section--grey" id="about">
   <div class="container">
     <div class="about__content">
       
@@ -460,7 +470,7 @@ title: Швейное производство Alex-Style
     <div class="container">
       <div class="heading__complex">
         <h2 class="title title--24">Комплексный подход</h2>
-      <p class="head-descr">Мы — профессионалы и преданны своему делу, поэтому ваша одежда будет </br> именно такой, как вы себе представляли</p>
+      <p class="head-descr">Мы — профессионалы и преданны своему делу, поэтому ваша одежда будет именно такой, как вы себе представляли</p>
       </div>
     </div>
 
@@ -496,8 +506,8 @@ title: Швейное производство Alex-Style
   </div>
 </div>
 
-<div class="wrapper">
-  <div class="section__contacts">
+<div class="wrapper" id="contacts">
+  <div class="section__contacts" >
     <div class="contacts__content">
       <div class="container">
         <div class="contacts__body">
@@ -534,7 +544,7 @@ title: Швейное производство Alex-Style
   </div>
 </div>
 
-<div class="cta__footer">
+<div class="cta__footer" id="cta__footer">
   <div class="container">
     <div class="cta">
       <h2 class="subtitle">

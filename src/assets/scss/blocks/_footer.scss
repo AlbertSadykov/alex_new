@@ -1,6 +1,11 @@
 .cta__footer{
   border-radius: 40px 40px 0 0;
   padding: 72px 0;
+
+  @include breakpoint($tablet-bp){
+    padding: 40px 0;
+   
+        }
 }
 
 
@@ -8,6 +13,11 @@ footer{
   background: $black;
   padding: 40px 0;
   color:$white;
+
+  @include breakpoint($mobile-bp){
+    padding: 32px 0;
+   
+        }
 }
 
 .footer__content{
@@ -15,18 +25,51 @@ footer{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+
+  @include breakpoint($tablet-bp){
+    flex-direction: column;
+   
+        }
+
+        @include breakpoint ($mobile-bp){
+          margin-bottom: 24px;
+        }
 }
 
 .footer__left{
   display:flex;
   align-items: center;
+
+  @include breakpoint($tablet-bp){
+    flex-direction: column;
+   
+        }
 }
 
 .logo__footer{
   margin-right: 154px;
+
+  @include breakpoint($tablet-bp){
+    margin-right: 0;
+    margin-bottom: 24px;
+    
+    img{
+      width: 136px;
+    }
+   
+        }
+        
 }
 
 .footer__menu{
+
+ 
+
+  @include breakpoint($tablet-bp){
+ 
+    margin-bottom: 24px;
+   
+        }
 
   ul{
     display: flex;
@@ -34,8 +77,17 @@ footer{
     list-style-type: none;
     padding: 0;
     margin: 0;
-    li{
 
+    @include breakpoint($mobile-bp){
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li{
+      @include breakpoint($mobile-bp){
+        text-align: center;
+      }
       padding: 0;
 
       a{
@@ -44,6 +96,12 @@ footer{
         text-decoration: none;
         color:$white;
         transition: .2s linear;
+
+        
+        @include breakpoint ($mobile-bp){
+          font-size: 14px;
+          line-height: 24px;
+         }
 
         &:hover{
           opacity: .8;
@@ -58,6 +116,15 @@ footer{
 
   a{
     margin-right: 24px;
+    text-decoration: none;
+
+    @include breakpoint ($mobile-bp){
+      margin-right: 16px;
+
+      img{
+        max-width: 40px;
+      }
+     }
 
     &:last-child{
       margin-right: 0;
@@ -71,14 +138,29 @@ footer{
   align-items: center;
   font-size: 14px;
   line-height: 24px;
+
+  @include breakpoint ($mobile-bp){
+    flex-direction: column;
+  }
 }
 
 .copy__left{
+
+  @include breakpoint ($mobile-bp){
+    display: flex;
+    flex-direction: column;
+  }
   a{
     text-decoration: none;
     color:$white;
     margin-right: 24px;
     transition: .2s linear;
+
+    @include breakpoint ($mobile-bp){
+      margin-right: 0;
+      text-align: center;
+      margin-bottom: 8px;
+    }
 
     &:hover{
       opacity: .8;

@@ -44,8 +44,21 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth < 991) {
       if (scrollY === 0) {
         ctaSection.style.marginTop = '0';
+        
       } else {
         ctaSection.style.marginTop = '-280px';
+        thread.style.transform = 'translateY(-300px)';
+      }
+    }
+
+
+    
+    if (window.innerWidth < 757) {
+      if (scrollY === 0) {
+        ctaSection.style.marginTop = '0';
+      } else {
+        ctaSection.style.marginTop = '-110px';
+        thread.style.transform = 'translateY(-170px)';
       }
     }
   }
@@ -56,19 +69,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// скролл cta
+
+
 document.addEventListener('DOMContentLoaded', function() {
   var ctaSection = document.querySelector('.section_cta');
+  var hasScrolled = false;
 
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && (window.innerWidth > 757) && !hasScrolled) {
         ctaSection.style.marginTop = '-280px';
-      } else {
-        // Проверяем, находится ли страница в самом верху
-        if (window.scrollY === 0) {
-          ctaSection.style.marginTop = '0';
-        }
       }
     });
   }, { threshold: [0.5] });
@@ -77,8 +87,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Добавляем обработчик события прокрутки
   window.addEventListener('scroll', function() {
-    if (window.scrollY === 0) {
+    if (!hasScrolled && window.innerWidth < 757) {
+      ctaSection.style.marginTop = '-110px';
+      hasScrolled = true;
+    } else if (window.scrollY === 0 && window.innerWidth >= 757) {
       ctaSection.style.marginTop = '0';
+      hasScrolled = false; // Возвращаем переменную hasScrolled в исходное состояние
     }
   });
 });

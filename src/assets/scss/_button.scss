@@ -4,6 +4,10 @@
   background: $primary;
   border: 0;
   transition: .2s linear;
+
+  @media (max-width:757px){
+    width: 100%;
+  }
   
 
   a{
