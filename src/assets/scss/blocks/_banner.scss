@@ -65,7 +65,7 @@
 .layer__header {
   position: relative;
   z-index: 19;
-  transition:  1.5s ease;
+  transition:  1s ease;
 
 
 
@@ -136,8 +136,10 @@
   }
 
   @include breakpoint ($mobile-bp){
-    bottom: -210px;
+    bottom: -205px;
   }
+
+  
 
 }
 

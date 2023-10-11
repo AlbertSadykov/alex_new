@@ -347,7 +347,7 @@
 .layer__header {
   position: relative;
   z-index: 19;
-  transition: 1.5s ease;
+  transition: 1s ease;
 }
 
 .layer__header.hidden {
@@ -412,7 +412,7 @@
 }
 @media (max-width: 757px) {
   .machine {
-    bottom: -210px;
+    bottom: -205px;
   }
 }
 
@@ -492,6 +492,7 @@
 @media (max-width: 757px) {
   .section_cta {
     padding: 40px 0 16px;
+    transition: opacity 1s, margin 1s;
     border-radius: 10px 10px 0 0;
   }
 }

@@ -1,24 +1,25 @@
 // анимация заголовка сайта
-let lastScrollPosition = window.pageYOffset;
+let isScrollingUp = false;
+let header = document.querySelector('.layer__header');
 
 function handleScroll() {
-  const currentScrollPosition = window.pageYOffset;
-  const header = document.querySelector('.layer__header');
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-  if (currentScrollPosition > lastScrollPosition) {
-    // Скролл вниз
-    header.classList.add('hidden');
-  } else {
-    // Скролл вверх
-    if (currentScrollPosition <= 0) {
+  if (!isMobile) {
+    if (window.scrollY === 0 && isScrollingUp) {
       header.classList.remove('hidden');
+      isScrollingUp = false;
+    } else if (window.scrollY > 0) {
+      isScrollingUp = true;
+      header.classList.add('hidden');
     }
   }
-
-  lastScrollPosition = currentScrollPosition;
 }
 
 window.addEventListener('scroll', handleScroll);
+
+
+
 // анимация заголовка сайта
 
 
@@ -80,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (scrollY === 0) {
         ctaSection.style.marginTop = '0';
       } else {
-        ctaSection.style.marginTop = '-110px';
-        thread.style.transform = 'translateY(-170px)';
+        ctaSection.style.marginTop = '-85px';
+        thread.style.transform = 'translateY(-146px)';
       }
     }
   }
@@ -111,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Добавляем обработчик события прокрутки
   window.addEventListener('scroll', function() {
     if (!hasScrolled && window.innerWidth < 757) {
-      ctaSection.style.marginTop = '-110px';
+      ctaSection.style.marginTop = '-85px';
       hasScrolled = true;
     } else if (window.scrollY === 0 && window.innerWidth >= 757) {
       ctaSection.style.marginTop = '0';

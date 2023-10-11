@@ -127,5 +127,8 @@ links.forEach(link => {
 });
 
 
+// текущий год в футере
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+// текущий год в футере
 
 
