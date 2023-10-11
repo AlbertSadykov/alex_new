@@ -422,7 +422,7 @@
 }
 
 .machine {
-    background-image: url(/assets/images/parallax/Sewing-machine.png);
+    background-image: url(../images/parallax/Sewing-machine.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: 0 280px;

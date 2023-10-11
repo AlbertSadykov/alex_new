@@ -119,6 +119,10 @@
 .materials__slide{
   max-width: 491px;
   width: 100%;
+
+  @include breakpoint ($notebook-bp){
+   max-width: 350px;
+  }
   h4{
     font-size: 18px;
     margin-bottom: 8px;
@@ -185,7 +189,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include breakpoint($tablet-bp){
+  @include breakpoint($notebook-bp){
     flex-direction: column;
   }
 }
@@ -193,7 +197,7 @@
 .img__nav{
 
 
-  @include breakpoint($tablet-bp){
+  @include breakpoint($notebook-bp){
     width: 100%;
     margin-bottom: 20px;
   }

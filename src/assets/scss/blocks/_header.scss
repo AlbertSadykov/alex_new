@@ -9,8 +9,12 @@
 }
 
 .logo{
-  width: 157px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 157px;
+
+  @include breakpoint($mobile-bp){
+    max-width: 73px;
+  }
 }
 
 .menu{
@@ -48,6 +52,11 @@
         text-decoration: none;
         font-size: 18px;
         line-height: 24px;
+        transition: .2s linear;
+
+        &:hover{
+         color:$primary;
+        }
       }
     }
   }
@@ -59,6 +68,11 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+  transition: .2s linear;
+
+  &:hover{
+    color:$primary;
+  }
 
   @include breakpoint($notebook-bp){
     display: none;
@@ -131,6 +145,7 @@
 	transition: transform 0.5s; 
   z-index: 600px;
   border-radius: 8px 0 0 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0, .2);
 }
 
 .mobile__nav.active__burger {
@@ -143,14 +158,14 @@
 
 .nav__list{
   
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 
     list-style-type: none;
 
     li{
-      margin-bottom: 8px;
+      margin-bottom: 5px;
 
       &:last-child{
         margin-bottom: 0;
@@ -168,7 +183,7 @@
 
 
 .callback__mobile{
-display: noen;
+display: none;
 
 @include breakpoint($tablet-bp){
   display: block;
@@ -179,6 +194,10 @@ display: noen;
     color:$black;
     text-decoration: none;
     font-weight: 700;
+
+    @include breakpoint($mobile-bp){
+      font-size: 16px !important;
+    }
   }
 }
 }

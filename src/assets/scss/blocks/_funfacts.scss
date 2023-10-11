@@ -68,7 +68,7 @@
 .fact_first{
   
   @include breakpoint($tablet-bp){
-    background-image: url('/assets/images/hover/1.jpg');
+    background-image: url('../images/hover/1.jpg');
   background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 4px;
@@ -79,7 +79,7 @@
 .fact_second{
   
   @include breakpoint($tablet-bp){
-    background-image: url('/assets/images/hover/2.jpg');
+    background-image: url('../images/hover/2.jpg');
   background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 4px;
@@ -90,7 +90,7 @@
 .fact_three{
   
   @include breakpoint($tablet-bp){
-    background-image: url('/assets/images/hover/3.jpg');
+    background-image: url('../images/hover/3.jpg');
   background-size: cover;
     background-repeat: no-repeat;
     }
@@ -99,17 +99,17 @@
 
 .fact_first::before {
   content: "";
-  background-image: url('/assets/images/hover/1.jpg');
+  background-image: url('../images/hover/1.jpg');
 }
 
 .fact_second::before {
   content: "";
-  background-image: url('/assets/images/hover/2.jpg');
+  background-image: url('../images/hover/2.jpg');
 }
 
 .fact_three::before {
   content: "";
-  background-image: url('/assets/images/hover/3.jpg');
+  background-image: url('../images/hover/3.jpg');
 }
 
 .facts__item::before {

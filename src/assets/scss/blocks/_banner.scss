@@ -1,5 +1,5 @@
 .banner{
-  background: url(/assets/images/parallax/Bg.png);
+  background: url(../images/parallax/Bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -100px;
@@ -11,7 +11,7 @@
   }
 
   @include breakpoint($mobile-bp){
-    background: url(/assets/images/mob-bg.jpg);
+    background: url(../images/mob-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -166,6 +166,16 @@
   bottom: -120px;
   transform: translateY(100px);
   transition: opacity 0.4s, transform 1.5s;
+
+  @include breakpoint($desktop-bp){
+    width: 350px;
+    bottom: -60px;
+  }
+
+  @include breakpoint($notebook-bp){
+    width: 400px;
+    bottom: -60px;
+  }
 
   @include breakpoint($tablet-bp){
     width: 300px;

@@ -29,10 +29,14 @@
   flex: 0 0 62%;
   transform: translate(-100%, 0px);
 
-  @include breakpoint($tablet-bp){
+  @include breakpoint($notebook-bp){
     flex: 0 0 55%;
-    transform: none;
    
+        }
+
+        @include breakpoint ($tablet-bp){
+          transform: none;
+          flex: 0 0 55%;
         }
 
 }

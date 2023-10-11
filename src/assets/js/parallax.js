@@ -1,3 +1,4 @@
+// анимация заголовка сайта
 let lastScrollPosition = window.pageYOffset;
 
 function handleScroll() {
@@ -9,7 +10,7 @@ function handleScroll() {
     header.classList.add('hidden');
   } else {
     // Скролл вверх
-    if (currentScrollPosition === 0) {
+    if (currentScrollPosition <= 0) {
       header.classList.remove('hidden');
     }
   }
@@ -18,6 +19,8 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+// анимация заголовка сайта
+
 
 
 
@@ -39,6 +42,26 @@ document.addEventListener('DOMContentLoaded', function() {
       gradient.style.opacity = '1';
     } else {
       gradient.style.opacity = '0';
+    }
+
+    if (window.innerWidth < 1600) {
+      if (scrollY === 0) {
+        ctaSection.style.marginTop = '0';
+        
+      } else {
+        ctaSection.style.marginTop = '-200px';
+        thread.style.transform = 'translateY(-100px)';
+      }
+    }
+
+    if (window.innerWidth < 1400) {
+      if (scrollY === 0) {
+        ctaSection.style.marginTop = '0';
+        
+      } else {
+        ctaSection.style.marginTop = '-150px';
+        thread.style.transform = 'translateY(-100px)';
+      }
     }
 
     if (window.innerWidth < 991) {
@@ -77,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-      if (entry.isIntersecting && (window.innerWidth > 757) && !hasScrolled) {
+      if (entry.isIntersecting && !hasScrolled) {
         ctaSection.style.marginTop = '-280px';
       }
     });
